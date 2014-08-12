@@ -1,7 +1,7 @@
 require 'spec_helper.rb'
 include SolarData
 describe Planet do
-    subject {Earth()}
+    subject {EARTH}
     describe "#mass" do
     	it "should == 1.3x1025" do
     		expect(subject.mass).to eq BigDecimal("1.3x1025")
