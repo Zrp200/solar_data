@@ -2,9 +2,9 @@ require "bigdecimal"
 module SolarData
 	class Planet
 		# Mass in pounds
-		attr_reader :mass
+			attr_reader :mass
 		# The planet's data
-		attr_reader :density, :gravity
+			attr_reader :density, :gravity
 		# Creates a new Planet. Parameter mass sets its mass, parameter density sets its density, and parameter gravity sets its gravity
     		def initialize(mass, density=1, gravity=1)
     			@mass, @density, @gravity = mass, density, gravity
@@ -16,6 +16,7 @@ module SolarData
 		end
 	def Sun()
 		Star.new BigDecimal("1.989e10"), 695800, 5778
+	end
 	class Star
 		# Mass in kilograms
 			attr_reader :mass
