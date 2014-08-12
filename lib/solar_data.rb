@@ -10,9 +10,10 @@ module SolarData
     			@mass, @density, @gravity = mass, density, gravity
     		end
 	end
-	def Earth()
-		Planet.new 1.3x1025
-	end
+	# Our planet
+		def Earth()
+			Planet.new BigDecimal("1.3x1025")
+		end
 	def Sun()
 		Star.new BigDecimal("1.989e10"), 695800, 5778
 	class Star
