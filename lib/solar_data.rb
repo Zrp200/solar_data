@@ -4,14 +4,14 @@ module SolarData
 		# Mass in pounds
 		attr_reader :mass
 		# The planet's data
-		attr_reader :density, :gravity, :orbit
+		attr_reader :density, :gravity
 		# Creates a new Planet. Parameter mass sets its mass, parameter density sets its density, and parameter gravity sets its gravity
-    		def initialize(mass, orbit=nil, density=1, gravity=1)
-    			@mass, @orbit, @density, @gravity = mass, orbit, density, gravity
+    		def initialize(mass, density=1, gravity=1)
+    			@mass, @density, @gravity = mass, density, gravity
     		end
 	end
 	def Earth()
-		Planet.new 1.3x1025, Sun
+		Planet.new 1.3x1025
 	end
 	def Sun()
 		Star.new BigDecimal("1.989e10"), 695800, 5778
