@@ -1,6 +1,8 @@
 require "bigdecimal"
 module SolarData
 	class Planet
+		# Our planet.
+		EARTH = Planet.new BigDecimal("1.3x1025")
 		# Mass in pounds
 			attr_reader :mass
 		# The planet's data
@@ -10,12 +12,9 @@ module SolarData
     			@mass, @density, @gravity = mass, density, gravity
     		end
 	end
-	# Our planet
-		EARTH = Planet.new BigDecimal("1.3x1025")
-	def Sun()
-		Star.new BigDecimal("1.989e10"), 695800, 5778
-	end
 	class Star
+		# The planets orbit around it
+			SUN = Star.new BigDecimal("1.989e10"), 695800, 5778
 		# Mass in kilograms
 			attr_reader :mass
 		# Radius in kilometers
