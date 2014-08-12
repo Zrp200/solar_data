@@ -32,6 +32,7 @@ describe Star do
 		end
 	end
 	describe "#radius" do
-		it "should == 695800
+		it "should == 695800"
+	end
 end
     	
