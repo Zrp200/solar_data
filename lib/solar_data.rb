@@ -1,15 +1,31 @@
-class Planet
-	# Creates a new Planet. Parameter mass sets its mass, parameter density sets its density, and parameter gravity sets its gravity
-    	def initialize(mass, density=1, gravity=1, orbit=nil)
-    		@mass, @density, @gravity, @orbit = mass, density, gravity, orbit
-    	end
-end
-class Earth < Planet
-	DENSITY = 1
-	def mass; 1.3 x 1025; end
-	def density; DENSITY; end
-	def gravity; 1; end
-	def initialize; end
+require "bigdecimal"
+module SolarData
+	class Planet
+		# Mass in pounds
+		attr_reader :mass
+		# The planet's data
+		attr_reader :density, :gravity, :orbit
+		# Creates a new Planet. Parameter mass sets its mass, parameter density sets its density, and parameter gravity sets its gravity
+    		def initialize(mass, orbit=nil, density=1, gravity=1)
+    			@mass, @orbit, @density, @gravity = mass, orbit, density, gravity
+    		end
+	end
+	def Earth()
+		Planet.new 1.3x1025, Sun
+	end
+	def Sun()
+		Star.new BigDecimal("1.989e10"), 695800, 5778
+	class Star
+		# Mass in kilograms
+			attr_reader :mass
+		# Radius in kilometers
+			attr_reader :radius
+		# Surface Temperature in Kelvin
+			attr_reader :st
+		def initialize(mass, radius, st=nil)
+			@mass, @radius, @st = mass, radius, st
+		end
+	end
 end
 
 		
