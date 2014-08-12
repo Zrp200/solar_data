@@ -31,5 +31,7 @@ describe Star do
 			expect(subject.mass).to be_an_instance_of BigDecimal
 		end
 	end
+	describe "#radius" do
+		it "should ==
 end
     	
