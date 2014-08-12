@@ -6,7 +6,7 @@ task :update_gem do
     `git pull --quiet`
     `gem build solar_data.gemspec --quiet`
     `gem install solar_data-0.0.0.gem --quiet`
-    `git add solar_data-0.0.0.gem`
+    `git add -A`
     `git commit -m 'Update solar_data-0.0.0.gem' --quiet`
     `git push --quiet`
 end
