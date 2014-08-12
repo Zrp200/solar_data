@@ -21,4 +21,15 @@ describe Planet do
 		end
 	end
 end
+describe Star do
+	subject {Sun()}
+	describe "#mass" do
+		it "should == 1.989\u2081\u2080" do
+			expect(subject.mass).to eq BigDecimal("1.989e19")
+		end
+		it "should be a BigDecimal" do
+			expect(subject.mass).to be_an_instance_of BigDecimal
+		end
+	end
+end
     	
