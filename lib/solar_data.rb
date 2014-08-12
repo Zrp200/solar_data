@@ -11,9 +11,7 @@ module SolarData
     		end
 	end
 	# Our planet
-		def Earth()
-			Planet.new BigDecimal("1.3x1025")
-		end
+		EARTH = Planet.new BigDecimal("1.3x1025")
 	def Sun()
 		Star.new BigDecimal("1.989e10"), 695800, 5778
 	end
