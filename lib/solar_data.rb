@@ -17,6 +17,10 @@ module SolarData
 		def initialize(mass, radius, st=nil)
 			@mass, @radius, @st = mass, radius, st
 		end
+		# The circumference of the star
+		def circumference
+			2*Math::PI*radius
+		end
 		# Mass in kilograms
 			attr_reader :mass
 		# Radius in kilometers
